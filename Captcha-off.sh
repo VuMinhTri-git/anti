@@ -4,13 +4,13 @@ curl -X PUT "https://api.cloudflare.com/client/v4/zones/dc4829573a8be18a7f2de659
      -H "Content-Type: application/json" \
      --data '{
      "action": "managed_challenge",
-     "priority": 564,
+     "priority": 2000,
      "paused": true,
-     "description": "Managed Challenge Việt Nam",
+     "description": "Captcha việt ",
      "filter": {
-    "id": "bf916bc3ff084f32b44d9ffac1fec3da",
-    "expression": "(http.user_agent contains \"Mozilla/5.0 (Macintosh; Intel Mac OS\" and http.user_agent ne \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0\" and http.user_agent ne \"CheckHost (https://check-host.net/)\" and ip.geoip.country eq \"VN\" and http.request.version in {\"HTTP/1.1\" \"HTTP/2\" \"HTTP/3\"} and http.request.method in {\"GET\" \"POST\"}) or (http.user_agent contains \"Mozilla/5.0 (Linux; Android\" and http.user_agent ne \"CheckHost (https://check-host.net/)\" and http.user_agent ne \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0\" and ip.geoip.country eq \"VN\" and http.request.version in {\"HTTP/1.1\" \"HTTP/2\" \"HTTP/3\"} and http.request.method in {\"GET\" \"POST\"}) or (http.user_agent contains \"Mozilla/5.0 (iPhone; CPU iPhone OS\" and http.user_agent ne \"CheckHost (https://check-host.net/)\" and http.user_agent ne \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0\" and ip.geoip.country eq \"VN\" and http.request.version in {\"HTTP/1.1\" \"HTTP/2\" \"HTTP/3\"} and http.request.method in {\"GET\" \"POST\"}) or (http.user_agent contains \"Mozilla/5.0 (Windows NT\" and http.user_agent ne \"CheckHost (https://check-host.net/)\" and http.user_agent ne \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0\" and ip.geoip.country eq \"VN\" and http.request.version in {\"HTTP/1.1\" \"HTTP/2\" \"HTTP/3\"} and http.request.method in {\"GET\" \"POST\"}) or (http.user_agent ne \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0\" and http.request.version eq \"HTTP/1.1\" and http.request.method eq \"HEAD\") or (http.user_agent ne \"CheckHost (https://check-host.net/)\" and http.request.version eq \"HTTP/1.1\" and http.request.method eq \"GET\")",
+    "id": "9bf149ab9ece4715b0fe1cfa0e36dfec",
+    "expression": "(ip.geoip.country eq \"VN\" and http.user_agent contains \"Mozilla/5.0 (Linux; Android\" and http.request.version in {\"HTTP/2\" \"HTTP/3\" \"HTTP/1.1\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country eq \"VN\" and http.user_agent contains \"Mozilla/5.0 (iPhone; CPU iPhone OS \" and http.request.version in {\"HTTP/2\" \"HTTP/3\" \"HTTP/1.1\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country eq \"VN\" and http.user_agent contains \"Mozilla/5.0 (Windows NT\" and http.request.version in {\"HTTP/2\" \"HTTP/3\" \"HTTP/1.1\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country eq \"VN\" and http.user_agent contains \"Mozilla/5.0 (Macintosh; Intel Mac OS\" and http.request.version in {\"HTTP/2\" \"HTTP/3\" \"HTTP/1.1\"} and http.request.method in {\"GET\" \"POST\"}) or (not http.user_agent contains \"Zalo\") or (not http.request.uri.path in {\"/api/v1/guest/telegram/webhook\"}) or (not http.request.uri.path in {\"/api/v1/guest/payment/notify\"}) or (not http.user_agent contains \"go-resty/2.7.0 (https://github.com/go-resty/resty)\") or (http.request.uri.path contains \"/api/v1/server/\" and not http.request.uri.query contains \"thaythanhapikey\")",
     "paused": false,
-    "description": "Managed Challenge Việt Nam"
+    "description": "Captcha việt "
   }
   }'
