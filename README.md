@@ -11,7 +11,7 @@ bash install-api.sh
 
 GET rule
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/DauDau432/Anti-Ddos/main/get-rules.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/VuMinhTri-git/anti/main/get-rules.sh)
 ```
 
 Cấu trúc GET rules
