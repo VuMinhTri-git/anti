@@ -1,6 +1,6 @@
-curl -X PUT "https://api.cloudflare.com/client/v4/zones/dc4829573a8be18a7f2de65921259f9e/firewall/rules/fc6762a6fe104550bb096b2e727e6052" \
-     -H "X-Auth-Email: aulax432@gmail.com" \
-     -H "X-Auth-Key: c773770966510b528aff596071164bbd4b7b3" \
+curl -X PUT "https://api.cloudflare.com/client/v4/zones/dc4829573a8be18a7f2de65921259f9e/firewall/rules/45ed8ab9d25f1e87472043691373686f" \
+     -H "X-Auth-Email: trivu3718@gmail.com" \
+     -H "X-Auth-Key: b658158ea2cdbd6fd1eb323dd1c9c37c01db1" \
      -H "Content-Type: application/json" \
      --data '{
      "action": "block",
