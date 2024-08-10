@@ -6,11 +6,11 @@ curl -X PUT "https://api.cloudflare.com/client/v4/zones/45ed8ab9d25f1e8747204369
      "action": "block",
      "priority": 1000,
      "paused": false,
-     "description": "Block ngoại",
+     "description": "Block Quốc Tế",
      "filter": {
     "id": "b288a60dfe0f467dbe3a201e6a978dff",
-    "expression": "(ip.geoip.country ne \"VN\" and http.user_agent contains \"Mozilla/5.0 (Linux; Android\" and http.request.version in {\"HTTP/2\" \"HTTP/3\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country ne \"VN\" and http.user_agent contains \"Mozilla/5.0 (iPhone; CPU iPhone OS \" and http.request.version in {\"HTTP/2\" \"HTTP/3\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country ne \"VN\" and http.user_agent contains \"Mozilla/5.0 (Windows NT\" and http.request.version in {\"HTTP/2\" \"HTTP/3\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country ne \"VN\" and http.user_agent contains \"Mozilla/5.0 (Macintosh; Intel Mac OS\" and http.request.version in {\"HTTP/2\" \"HTTP/3\"} and http.request.method in {\"GET\" \"POST\"}) or (not http.user_agent contains \"Zalo\") or (not http.request.uri.path in {\"/api/v1/guest/telegram/webhook\"}) or (not http.request.uri.path in {\"/api/v1/guest/payment/notify\"}) or (not http.user_agent contains \"go-resty/2.7.0 (https://github.com/go-resty/resty)\") or (http.request.uri.path contains \"/api/v1/server/\" and not http.request.uri.query contains \"thaythanhapikey\")",
+    "expression": "(ip.geoip.country ne \"VN\" and http.user_agent contains \"Mozilla/5.0 (Windows NT\" and http.request.version in {\"HTTP/2\" \"HTTP/3\" \"HTTP/1.1\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country ne \"VN\" and http.user_agent contains \"Mozilla/5.0 (iPhone; CPU iPhone OS\" and http.request.version in {\"HTTP/2\" \"HTTP/3\" \"HTTP/1.1\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country ne \"VN\" and http.user_agent contains \"Mozilla/5.0 (Linux; Android\" and http.request.version in {\"HTTP/2\" \"HTTP/3\" \"HTTP/1.1\"} and http.request.method in {\"GET\" \"POST\"}) or (ip.geoip.country ne \"VN\" and http.user_agent contains \"Mozilla/5.0 (Macintosh; Intel Mac OS\" and http.request.version in {\"HTTP/2\" \"HTTP/3\" \"HTTP/1.1\"} and http.request.method in {\"GET\" \"POST\"})",
     "paused": false,
-    "description": "Block ngoại"
+    "description": "Block Quốc Tế"
   }
   }'
