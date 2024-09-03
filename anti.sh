@@ -1,6 +1,6 @@
 #!bin/sh
 connect=$(netstat -alntp | grep :443 | wc -l)
-if [ $connect -lt 500 ]
+if [ $connect -lt 200 ]
 then
   cat /root/status.txt | grep "block" && bash <(curl -Ls https://raw.githubusercontent.com/VuMinhTri-git/anti/main/block-off.sh) && bash <(curl -Ls https://raw.githubusercontent.com/VuMinhTri-git/anti/main/Captcha-off.sh) && echo "allow" > /root/status.txt && clear && echo -e "ANTI DDOS OFF"
 else
