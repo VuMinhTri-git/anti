@@ -1,4 +1,4 @@
-curl -X PUT "https://api.cloudflare.com/client/v4/zones/38e25501dea84f0a9790a1f092ca91c0/firewall/rules/38e25501dea84f0a9790a1f092ca91c0" \
+curl -X PUT "https://api.cloudflare.com/client/v4/zones/45ed8ab9d25f1e87472043691373686f/firewall/rules/38e25501dea84f0a9790a1f092ca91c0" \
      -H "X-Auth-Email: trivu3718@gmail.com" \
      -H "X-Auth-Key: b658158ea2cdbd6fd1eb323dd1c9c37c01db1" \
      -H "Content-Type: application/json" \
